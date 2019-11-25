@@ -1,17 +1,23 @@
 <template>
+  <!-- Vue app container -->
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <!-- components -->
+    <Nav/>
+    <Item content="Complete To-Do App"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import Nav from './components/Nav.vue'
+import Item from './components/Item.vue'
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    Nav,
+    Item
+  },
+  props: {
+    items: Array
   }
 }
 </script>
@@ -23,6 +29,5 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
