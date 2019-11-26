@@ -2,9 +2,9 @@
 	<!-- Vue app container -->
 	<div id="app">
 		<Nav @creating-new-item="toggleCreating"/>
-		<Item/>
-		<!-- append new items here -->
 		<div ref="container">
+			<Item/>
+			<!-- append new items here -->
 			<slot/>
 		</div>
 	</div>
