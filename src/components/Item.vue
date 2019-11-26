@@ -1,11 +1,6 @@
 <template>
   <div>
     <input 
-        type="checkbox" 
-        v-model="done"
-        @select="completed"
-    >
-    <input 
         v-if="this.editing"
         v-model="content" 
         :placeholder="placeHolderValue"
@@ -46,7 +41,7 @@ export default {
             // get placeholder content for input field
             placeHolderValue: this.content,
             // if the item is done
-            done: false
+            done: 'uncompleted'
         }
     },
     methods: {
@@ -66,7 +61,7 @@ export default {
             this.$emit('click-remove', `content null: ${this.empty}`)
         },
         completed() {
-            this.$emit('completed-item', this.content)
+            this.$emit('completed-item', this.done, this.content)
         }
     }
 };
