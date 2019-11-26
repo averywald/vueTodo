@@ -1,11 +1,15 @@
 <template>
   <div>
-    <h2>To Do List</h2>
     <Button
         @click.native="emitToggle"
         text="+ New Item"
     />
-    <input type="text" name="searchBar" id="search">
+    <input 
+        type="text" 
+        name="searchBar" 
+        id="search"
+        placeholder="search"
+    >
   </div>
 </template>
 
@@ -27,4 +31,5 @@ export default {
 
 <style lang="sass" scoped>
     @import '../styles/Nav.sass'
+    @import '../styles/Input.sass'
 </style>

@@ -1,1 +1,17 @@
-// make input fields pretty
+// import color palette
+@import './Palette.sass'
+
+input[type=text]
+    border: 3px solid transparent
+    width: 20vw
+    height: 5vh
+    font-size: 30px
+    font-family: $fonts
+    color: $cobalt
+    font-weight: bold
+    border-radius: 25px
+    padding: 0 1.5vw
+    font-size: 1.5em
+    
+    &.itemInput
+        width: 50vw
