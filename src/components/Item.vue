@@ -3,7 +3,6 @@
     <input 
         v-if="this.editing"
         v-model="content" 
-        :placeholder="placeHolderValue"
     >
     <h2 v-else> {{ this.content }} </h2>
     <div class="itemConfig">
@@ -22,7 +21,7 @@
 
 <script>
 import Button from './Button.vue'
-import { isNullOrUndefined } from 'util'
+
 export default {
     name: 'Item',
     components: {
@@ -36,12 +35,8 @@ export default {
         return {
             // set in editing mode
             editing: false,
-            // check if item has content
-            empty: isNullOrUndefined(this.content),
-            // get placeholder content for input field
-            placeHolderValue: this.content,
             // if the item is done
-            done: 'uncompleted'
+            done: false
         }
     },
     methods: {
